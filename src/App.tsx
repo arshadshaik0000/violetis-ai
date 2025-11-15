@@ -10,13 +10,11 @@ export interface Message {
   timestamp: Date;
 }
 
-const API_BASE = "https://auroral-claudio-quietly.ngrok-free.dev";
+const API_BASE = 'https://auroral-claudio-quietly.ngrok-free.dev';
 
 function cleanAssistantText(raw: string): string {
   if (!raw) return '';
-  // remove **bold** or *italic* markers
   let cleaned = raw.replace(/\*\*(.*?)\*\*/g, '$1').replace(/\*(.*?)\*/g, '$1');
-  // optional: collapse multiple blank lines
   cleaned = cleaned.replace(/\n{3,}/g, '\n\n');
   return cleaned;
 }
@@ -120,7 +118,8 @@ export default function App() {
             <div className="mb-4 flex justify-center">
               <div className="inline-flex flex-col md:flex-row md:items-center md:gap-2 px-4 py-2 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-xl">
                 <span className="text-xs text-[#BFBFC9]">
-                  Ask anything related to your research, abstracts, investor outreach, or paper explanations.
+                  Ask anything related to your research, abstracts, investor outreach, or paper
+                  explanations.
                 </span>
               </div>
             </div>
