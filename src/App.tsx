@@ -10,7 +10,7 @@ export interface Message {
   timestamp: Date;
 }
 
-const API_BASE = 'https://auroral-claudio-quietly.ngrok-free.dev';
+const API_BASE = "https://nonfrigid-unseen-deane.ngrok-free.dev";
 
 function cleanAssistantText(raw: string): string {
   if (!raw) return '';
